@@ -1,17 +1,11 @@
 import React from "react";
+import Post from "./Post";
 
 export default function PostList({ posts }) {
   return (
     <div>
-      <ul>
-        {posts !== null &&
-          posts.map(post => (
-            <li key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-            </li>
-          ))}
-      </ul>
+      <h3>Posts</h3>
+      <ul>{posts !== null && posts.map(post => <Post post={post} />)}</ul>
     </div>
   );
 }

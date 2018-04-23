@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 
 class Post extends Component {
-  state = {};
+  componentDidMount() {}
+
+  componentWillMount() {}
+
   render() {
-    return <div>I'm a Post!</div>;
+    const { post } = this.props;
+
+    return (
+      <li key={post.id}>
+        {post.title}
+        {post.body}
+      </li>
+    );
   }
 }
 
