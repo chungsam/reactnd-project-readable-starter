@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TopNav from "./components/nav/TopNav";
+import SideNav from "./components/nav/SideNav";
 import PostList from "./components/post/PostList";
 import * as PostsAPI from "./api/PostsAPI";
 import { connect } from "react-redux";
@@ -32,8 +33,10 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-3">Side nav here</div>
-          <div className="col-md-9">
+          <div className="col-md-4">
+            <SideNav posts={posts} />
+          </div>
+          <div className="col-md-8">
             <PostList posts={posts} />
           </div>
         </div>
