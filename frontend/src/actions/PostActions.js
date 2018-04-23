@@ -1,7 +1,8 @@
-import {ADD_POST} from '../actions';
+import { ADD_POST } from "../actions";
 
-export function addPost() {
+export function addPost(post) {
   return {
-    type: ADD_POST
+    type: ADD_POST,
+    post
   };
 }
