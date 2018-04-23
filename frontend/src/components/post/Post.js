@@ -14,7 +14,14 @@ class Post extends Component {
         <h5>{post.title}</h5>
 
         <p>{post.body}</p>
-        <span className="badge badge-primary badge-pill">14</span>
+        <span
+          className={
+            "badge badge-pill " +
+            (post.voteScore >= 0 ? "badge-success" : "badge-danger")
+          }
+        >
+          {post.voteScore}
+        </span>
       </li>
     );
   }
