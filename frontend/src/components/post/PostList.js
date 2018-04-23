@@ -4,8 +4,11 @@ import Post from "./Post";
 export default function PostList({ posts }) {
   return (
     <div>
-      <h3>Posts</h3>
-      <ul>{posts !== null && posts.map(post => <Post post={post} />)}</ul>
+      <h2>Posts</h2>
+      <ul className="list-group list-group-flush">
+        {posts !== null &&
+          posts.map(post => <Post post={post} key={post.id} />)}
+      </ul>
     </div>
   );
 }

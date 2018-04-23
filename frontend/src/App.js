@@ -21,8 +21,16 @@ class App extends Component {
     const { posts } = this.state;
 
     return (
-      <div className="App">
-        <PostList posts={posts} />
+      <div className="App container-fluid">
+        <div className="row">
+          <div className="col-md-12">Top nav here</div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">Side nav here</div>
+          <div className="col-md-9">
+            <PostList posts={posts} />
+          </div>
+        </div>
       </div>
     );
   }
